@@ -45,7 +45,7 @@ class Signup extends Component {
         return (
             <div>
                 <h3>Sign Up</h3>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <input onChange={this.handleOnChange} type='text' name='name' placeholder='enter your name' />
                     <input onChange={this.handleOnChange} type='email' name='email' placeholder='enter your emil address' />
                     <input onChange={this.handleOnChange} type='text' name='username' placeholder='create username' />
