@@ -38,7 +38,7 @@ class App extends Component {
           <Route path='/' exact render={() => <Home funFact={this.state.funFact} />}/>
           <Route path='/login' render={(props) => <Login {...props} />} />
           <Route path='/signup' render={(props) => <Signup {...props}/>} />
-          <Route path='/profile/:id' render={() => <Profile />} />
+          <Route path='/profile/:id' render={(props) => <Profile {...props} />} />
           <Route path='/jokes' render={() => <JokesDisplay />}/>
           <Route path='/funfacts' exact render={() => <FunFactsDisplay funFact={this.state.funFact}/>}/>
         </main>
