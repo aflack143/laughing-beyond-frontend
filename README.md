@@ -3,7 +3,8 @@
 ## Description:
 A collection of Jokes, FunFacts and Quotes for laughter, learning and inspiration. 
 Jointly created by Julia Christensen and Andrea Clark
-[Link to project 3](https://github.com/aflack143/laughing&beyond)
+* [Link to Project 3 - frontend](https://github.com/aflack143/laughing-beyond-frontend)
+* [Link to Project 3 - backend](https://github.com/aflack143/laughing-beyond-backend)
 
 ## Brief Example:
 <img src="https://user-images.githubusercontent.com/80013194/122136801-e01d2a00-ce08-11eb-9c4c-68d1bbc0ed79.png" width="700">
