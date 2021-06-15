@@ -17,37 +17,31 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-        jokes: [],
         funFact: ''
     }
 }
 
   componentDidMount = () => {
-      axios.get('https://official-joke-api.appspot.com/jokes/ten')
+      axios.get('http://numbersapi.com/random')
       .then(resp => {
-          console.log(resp.data)
-          this.setState({
-              jokes: resp.data
-          })
-      })
-      axios.get('http://numbersapi.com/random?min=0&max=1000')
-      .then(resp => {
-          console.log(resp.data)
           this.setState({
               funFact: resp.data,
           })
       })
   }
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Route path='/' exact render={() => <Home funFact={this.state.funFact} />}/>
-        <Route path='/login' render={(props) => <Login {...props} />} />
-        <Route path='/signup' render={(props) => <Signup {...props}/>} />
-        <Route path='/profile/:id' render={() => <Profile />} />
-        <Route path='/jokes' render={() => <JokesDisplay jokes={this.state.jokes}/>}/>
-        <Route path='/funfacts' exact render={() => <FunFactsDisplay funFact={this.state.funFact}/>}/>
+        <main>
+          <Route path='/' exact render={() => <Home funFact={this.state.funFact} />}/>
+          <Route path='/login' render={(props) => <Login {...props} />} />
+          <Route path='/signup' render={(props) => <Signup {...props}/>} />
+          <Route path='/profile/:id' render={() => <Profile />} />
+          <Route path='/jokes' render={() => <JokesDisplay />}/>
+          <Route path='/funfacts' exact render={() => <FunFactsDisplay funFact={this.state.funFact}/>}/>
+        </main>
         <Footer />
       </div>
     );

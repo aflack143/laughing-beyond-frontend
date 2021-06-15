@@ -5,20 +5,20 @@ class JokesDisplay extends Component  {
     constructor(props) {
         super(props)
         this.state = {
-            jokes: props.jokes,
+            jokes: [],
             type: ''
         }
     }
 
-    // componentDidMount = () => {
-    //     axios.get('https://official-joke-api.appspot.com/jokes/ten')
-    //     .then(resp => {
-    //         console.log(resp.data)
-    //         this.setState({
-    //             jokes: resp.data
-    //         })
-    //     })
-    // }
+    componentDidMount = () => {
+        axios.get('https://official-joke-api.appspot.com/jokes/ten')
+        .then(resp => {
+            console.log(resp.data)
+            this.setState({
+                jokes: resp.data
+            })
+        })
+    }
 
     render() {
         const jokes = this.state.jokes
