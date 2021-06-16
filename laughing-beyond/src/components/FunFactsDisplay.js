@@ -25,10 +25,14 @@ class FunFactsDisplay extends Component  {
                 <h3>Fun Facts with Numbers</h3>
                     <div className='funFact'>
                         <p>{funFact}</p>
+
                     </div>
+                    <button onClick="window.location.reload();">Refresh Page</button>
             </div>
         )
     }
 }
+
+
 
 export default FunFactsDisplay

@@ -3,7 +3,7 @@ import React from "react"
 const EditProfile = (props) => {
     return (
         <div>
-           <form onClick={props.handleSubmit}>
+           <form onSubmit={props.handleSubmit}>
                <input onChange={props.handleChange} type="text" name="img" value={props.user.img} placeholder="Image" />
                <input onChange={props.handleChange} type="text" name="name" value={props.user.name} placeholder="Name" />
                <input onChange={props.handleChange} type="text" name="email" value={props.user.email} placeholder="Email" />
