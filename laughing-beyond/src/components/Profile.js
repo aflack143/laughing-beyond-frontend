@@ -3,7 +3,7 @@ import axios from 'axios'
 
 class Profile extends Component {
     constructor(props) {
-        super()
+        super(props)
         this.state = {
             user: {
                 name: '',
