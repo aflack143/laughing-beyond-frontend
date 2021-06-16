@@ -2,6 +2,7 @@ import axios from 'axios'
 // import React, { Component } from 'react'
 import React, { useState, useEffect } from 'react'
 import JokesSearch from './JokesSearch'
+import JokeButton from './JokeButton'
 
 // class JokesDisplay extends Component  {
 //     constructor(props) {
@@ -13,7 +14,11 @@ import JokesSearch from './JokesSearch'
 //     }
 const JokesDisplay = (props) => {
     const [data, setData] = useState({
-        jokes: [],
+        jokes: [
+            {
+            display: ''
+            }
+        ],
         type: 'general'
     })
 
@@ -81,12 +86,15 @@ const JokesDisplay = (props) => {
                 />
                 <div className='jokes'>
                     {jokes.map((joke) => {
+                        joke.push({display: false})
+                        let display = false
                         return(
                             <div className='joke'>
                                 <div className='setup'>
                                     <p>#{joke.id}</p>
                                     <p>{joke.setup}</p>
                                 </div>
+                                <JokeButton display={joke.display} />
                                 <div className='punchline'>
                                     <p>{joke.punchline}</p>
                                 </div>

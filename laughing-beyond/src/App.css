@@ -18,10 +18,10 @@
 }
 
 #jokes {
-  background-image: url('https://i.pinimg.com/736x/77/54/8a/77548a26a5db319c7f8d93d8e13fcfa3.jpg');
+  background-image: url('https://t3.ftcdn.net/jpg/01/63/24/34/360_F_163243451_uNQ0OqyR2FCAqkwRonQUH7KcdBTW6Bkr.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   min-height: 80vh;
   width: 100%;
   margin: 0;
