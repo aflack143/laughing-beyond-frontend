@@ -86,7 +86,6 @@ const JokesDisplay = (props) => {
                 />
                 <div className='jokes'>
                     {jokes.map((joke) => {
-                        joke.push({display: false})
                         let display = false
                         return(
                             <div className='joke'>
@@ -94,7 +93,7 @@ const JokesDisplay = (props) => {
                                     <p>#{joke.id}</p>
                                     <p>{joke.setup}</p>
                                 </div>
-                                <JokeButton display={joke.display} />
+                                <JokeButton display={display} />
                                 <div className='punchline'>
                                     <p>{joke.punchline}</p>
                                 </div>
