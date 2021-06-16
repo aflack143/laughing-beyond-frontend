@@ -13,7 +13,7 @@ const JokesSearch = (props) => {
                 </label>
             </form>
         </div> */}
-            <fieldset onChange={props.handleChange}>
+            <fieldset className="jokesearch" onChange={props.handleChange}>
                 <label for='general'><input type='radio' name='type' value='general' checked={props.type === 'general'}/>General</label>
                 <label for='programming'> <input type='radio' name='type' value='programming' checked={props.type === 'programming'}/>Programming</label>
                 <label for='knock-knock'> <input type='radio' name='type' value='knock-knock' checked={props.type === 'knock-knock'}/>Knock-Knock</label>

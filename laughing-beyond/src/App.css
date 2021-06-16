@@ -18,17 +18,56 @@
 }
 
 #jokes {
-  /* background-image: url('');
+  background-image: url('https://i.pinimg.com/736x/77/54/8a/77548a26a5db319c7f8d93d8e13fcfa3.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
-  min-height: 70vh;
+  background-size: contain;
+  min-height: 80vh;
+  width: 100%;
   margin: 0;
   padding: 0;
+  background-color: black;
+  color: orange;
+}
+.jokes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-around;
+  font-weight: bold;
+}
+
+.joke {
+  color: black;
+  background-color: rgba(248, 196, 26, 0.712);
+  width: 17%;
+  height:250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  padding: 5px;
+}
+
+.setup {
+height: 50%
+}
+
+.punchline {
+  height: 50%
+}
+
+.jokesearch {
+  width: fit-content;
+  margin: 0 auto;
+  border-color: orange;
 }
 
 .header {
-  height: 100px;
+  height: 13vh;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -51,9 +90,9 @@ main {
   flex-grow: 1;
 }
 footer {
-  height: 75px;
+  height: 7vh;
   text-align: center;
-  background-color: orange;
+  background-color: #ffa600;
   background-repeat: no-repeat;
   background-size: cover;
 }

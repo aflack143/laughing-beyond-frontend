@@ -83,9 +83,13 @@ const JokesDisplay = (props) => {
                     {jokes.map((joke) => {
                         return(
                             <div className='joke'>
-                                <p>#{joke.id}</p>
-                                <p>{joke.setup}</p>
-                                <p>{joke.punchline}</p>
+                                <div className='setup'>
+                                    <p>#{joke.id}</p>
+                                    <p>{joke.setup}</p>
+                                </div>
+                                <div className='punchline'>
+                                    <p>{joke.punchline}</p>
+                                </div>
                             </div>
                         )
                     })}
