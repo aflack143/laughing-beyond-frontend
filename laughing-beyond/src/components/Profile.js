@@ -49,7 +49,7 @@ class Profile extends Component {
         await axios.delete(`http://localhost:3001/user/profile/${this.props.match.params.id}`)
         .then (() => {
             console.log("Deleting Profile");
-            this.props.history.push('/home')
+            this.props.history.push('/')
         })
     }
 
