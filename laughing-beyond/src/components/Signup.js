@@ -27,28 +27,31 @@ class Signup extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-
-        axios.post("http://localhost:3001/user/signup", this.state.data)
+        console.log('user starting!')
+        axios.post("http://localhost:3001/auth/signup", this.state.data)
         .then(resp => {
             console.log("user created!")
-            console.log(resp)
+            // console.log(resp)
             this.props.history.push(`/profile/${resp.data.user.id}`)
         })
         .catch(err => {
             console.log(err)
         })
-
-
     }
+
     render() {
-        console.log(this.state.data)
+        // console.log(this.state.data)
         return (
             <div>
                 <h3>Sign Up</h3>
                 <form onSubmit={this.handleSubmit}>
+                    <label for="name">Name: </label>
                     <input onChange={this.handleOnChange} type='text' name='name' placeholder='enter your name' />
-                    <input onChange={this.handleOnChange} type='email' name='email' placeholder='enter your emil address' />
+                    <label for="email">Email: </label>
+                    <input onChange={this.handleOnChange} type='email' name='email' placeholder='enter your email address' />
+                    <label for="username">Username: </label>
                     <input onChange={this.handleOnChange} type='text' name='username' placeholder='create username' />
+                    <label for="password">Password: </label>
                     <input onChange={this.handleOnChange} type='password' name='password' placeholder='create password' />
                     <input type='submit' value='Sign Up'/>
                 </form>
