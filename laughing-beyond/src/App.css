@@ -7,6 +7,16 @@
   min-height: 100vh;
 }
 
+#funFacts {
+  background-image: url('https://static7.depositphotos.com/1278966/761/i/600/depositphotos_7616729-stock-photo-numbers-background-light.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   height: 100px;
   display: flex;
