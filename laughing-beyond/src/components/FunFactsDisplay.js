@@ -7,7 +7,9 @@ class FunFactsDisplay extends Component  {
         this.state = {
             funFact: ''
         }
+     
     }
+   
 
     componentDidMount = () => {
         axios.get('http://numbersapi.com/random?min=0&max=1000')
@@ -18,6 +20,7 @@ class FunFactsDisplay extends Component  {
             })
         })
     }
+
     render() {
         const funFact = this.state.funFact
         return (
@@ -27,10 +30,15 @@ class FunFactsDisplay extends Component  {
                         <p>{funFact}</p>
 
                     </div>
-                    <button onClick="window.location.reload();">Refresh Page</button>
+                    <button><a onClick={() => {window.location.href="/funfacts"}}>New Fun Fact</a></button>
             </div>
         )
+ 
+                
+        
     }
+
+   
 }
 
 
