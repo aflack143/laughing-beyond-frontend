@@ -7,7 +7,7 @@ Jointly created by Julia Christensen and Andrea Clark
 * [Link to Project 3 - backend](https://github.com/aflack143/laughing-beyond-backend)
 
 ## Brief Example:
-<img src="https://user-images.githubusercontent.com/80013194/122136801-e01d2a00-ce08-11eb-9c4c-68d1bbc0ed79.png" width="700">
+<img src="https://user-images.githubusercontent.com/80013194/122302001-1de08800-cec7-11eb-93dd-a8928fad6de3.png" width="700">
 
 
 ## Features:
