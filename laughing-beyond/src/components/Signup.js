@@ -42,7 +42,7 @@ class Signup extends Component {
     render() {
         // console.log(this.state.data)
         return (
-            <div className="user">
+            <div className="user signup">
                 <div className="container">
                     <div id="signup">
                         <h2>Sign Up</h2>

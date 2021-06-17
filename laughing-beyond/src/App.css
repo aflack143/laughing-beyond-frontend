@@ -8,9 +8,7 @@
 }
 
 #funFacts {
-  background-image: url('https://static7.depositphotos.com/1278966/761/i/600/depositphotos_7616729-stock-photo-numbers-background-light.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('https://static7.depositphotos.com/1278966/761/i/600/depositphotos_7616729-stock-photo-numbers-background-light.jpg') center no-repeat;
   background-size: cover;
   min-height: 80vh;
   margin: 0;
@@ -57,10 +55,10 @@
   border-radius: 50px;
 }
 
+
+
 #jokes {
-  background-image: url('https://t3.ftcdn.net/jpg/01/63/24/34/360_F_163243451_uNQ0OqyR2FCAqkwRonQUH7KcdBTW6Bkr.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('https://t3.ftcdn.net/jpg/01/63/24/34/360_F_163243451_uNQ0OqyR2FCAqkwRonQUH7KcdBTW6Bkr.jpg') center no-repeat;
   background-size: cover;
   min-height: 80vh;
   width: 100%;
@@ -183,8 +181,7 @@ input.radiobtn {
   flex-direction: column;
   margin: 0;
   justify-content: flex-end;
-  background-image: url('https://t3.ftcdn.net/jpg/02/86/18/20/360_F_286182066_yY72dajL2Vv9pYZ0LWiDiYZrMEStz0Fo.jpg');
-  background-repeat: no-repeat;
+  background: url('https://t3.ftcdn.net/jpg/02/86/18/20/360_F_286182066_yY72dajL2Vv9pYZ0LWiDiYZrMEStz0Fo.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -337,4 +334,86 @@ img {
 .profilecontainer form {
 margin: 0 auto;
 max-width: 100%;
+}
+
+.login {
+  background: url(./images/emoji-lemonchiffon.png) bottom no-repeat;
+}
+
+.signup {
+  background: url(./images/emoji-lemonchiffon-flipped.png) bottom no-repeat;
+}
+
+#home {
+  background: url('https://freerangestock.com/sample/52688/colourful-wave-background-shows-wavy-design-artwork-.jpg') center no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  flex-wrap: nowrap;
+}
+
+.home-container1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-items: center;
+  margin: 2% 5%;
+}
+.home-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin: 2% 5%;
+}
+
+.home-btn {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-btn button {
+  width: 150px;
+  height: 150px;
+  border: mediumblue 5px solid;
+  border-radius: 100%;
+  background-image: url(./images/emoji.png);
+  background-position: center;
+  background-size: 500px;
+}
+
+.home-content {
+  min-width: 75%;
+  flex-grow: 2;
+}
+
+.home-joke, .home-fact {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  border: orange 2px solid;
+  background-color: rgba(173, 216, 230, 0.534);
+  height: 30vh;
+  padding: 5px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-fact p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.home-joke p {
+  height: 50%;
+  display: flex;
+  align-items: center;
 }

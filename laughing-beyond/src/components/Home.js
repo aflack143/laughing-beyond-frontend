@@ -30,21 +30,26 @@ class Home extends Component  {
     render(){
         const joke = this.state.joke
         return (
-            <div>
+            <div id="home">
                 <h3>Home Page</h3>
-                <div className="home-joke">
-                    <div>
-                        <p>#{joke.id}</p>
+                <div className="home-container1">
+                    <div className='home-joke home-content'>
                         <p>{joke.setup}</p>
                         <p>{joke.punchline}</p>
                     </div>
-                    <button><Link to='/jokes'>Click for more jokes</Link></button>
+                    <div className='home-btn'>
+                        <button><Link to='/jokes'>Click for more jokes</Link></button>
+                    </div>
                 </div>
-                <div className="home-fact">
-                    <p>{this.state.funFact}</p>
-                    <button><Link to='/funfacts'>Click for more fun facts</Link></button>
+                <div className="home-container2">
+                    <div className='home-fact home-content'>
+                        <p>{this.state.funFact}</p>
+                    </div>
+                    <div className='home-btn'>
+                        <button><Link to='/funfacts'>Click for more fun facts</Link></button>
+                    </div>
                 </div>
-              </div>
+            </div>
         )
     }
 }
