@@ -77,14 +77,19 @@ class Profile extends Component {
             <div className="user">
                 <div>
                     <h3>Profile</h3>
-                    <div>
+                    <div className='profile'>
                         <img src={user.img}/>
-                        <div>
+                        <div className='profileinfo'>
                             <p>{user.name}</p>
                             <p>{user.email}</p>
                             <p>{user.username}</p>
+                        </div>
+                        <div className='profileedit'>
                             {user.display &&
-                            <EditProfile user={user} handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleDelete={this.handleDelete}/>
+                            <EditProfile 
+                                user={user} 
+                                handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleDelete={this.handleDelete}
+                                />
                             }
                             {!user.display &&
                             <EditProfileButton handleButtonView={this.handleButtonView}/>

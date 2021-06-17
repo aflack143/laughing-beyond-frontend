@@ -26,11 +26,10 @@ class FunFactsDisplay extends Component  {
         return (
             <div id='funFacts'>
                 <h3>Fun Facts with Numbers</h3>
-                    <div className='funFact'>
-                        <p>{funFact}</p>
-
-                    </div>
+                <div className='factcontainter'>
+                    <p className='funFact'>{funFact}</p>
                     <button><a onClick={() => {window.location.href="/funfacts"}}>New Fun Fact</a></button>
+                </div>
             </div>
         )
  

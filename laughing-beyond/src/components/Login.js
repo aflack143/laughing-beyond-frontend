@@ -42,13 +42,13 @@ class Login extends Component {
                 <div className="container">
                     <h2>Log In</h2>
                     <form onSubmit={this.handleSubmit}>
-                        <div>
-                        <label for="username">Username: </label>
-                        <input onChange={this.handleOnChange} type='text' name='username' placeholder='username' />
+                        <div className='userinfo'>
+                            <label for="username">Username: </label>
+                            <input onChange={this.handleOnChange} type='text' name='username' placeholder='username' />
                         </div>
-                        <div> 
-                        <label for="password">Password: </label>
-                        <input onChange={this.handleOnChange} type='password' name='password' placeholder='password' />
+                        <div className='userinfo'>
+                            <label for="password">Password: </label>
+                            <input onChange={this.handleOnChange} type='password' name='password' placeholder='password' />
                         </div>
                         <input className='formbtn' type='submit' value='Log In'/>
                     </form>

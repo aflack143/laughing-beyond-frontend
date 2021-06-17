@@ -1,10 +1,10 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { Component, useEffect, useReducer, useState } from 'react'
 import JokeButton from './JokeButton'
 
 const Joke = (props) => {
 
     const [joke, setJoke] = useState(props.joke)
-    const [display, setDisplay] = useState(false)
+    const [display, setDisplay] = useState(props.display)
 
     const handleClick = (event) => {
         event.preventDefault()
@@ -14,7 +14,7 @@ const Joke = (props) => {
     useEffect(() => {setJoke(props.joke)}, [props.joke])
     
     return (
-        <div className='joke' key={props.joke<joke}>
+        <div className='joke' key={props.display!==display}>
             <div className='jokeid'>
                 <p>#{joke.id}</p>
             </div>

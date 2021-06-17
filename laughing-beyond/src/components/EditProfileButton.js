@@ -2,7 +2,7 @@ import React from "react"
 
 const EditProfileButton = (props) => {
     return (
-        <div>
+        <div class="profilecontainer">
            <button id='editbtn' onClick={props.handleButtonView}>Edit Profile</button>
         </div>
     )
