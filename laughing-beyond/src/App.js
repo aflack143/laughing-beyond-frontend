@@ -40,7 +40,7 @@ class App extends Component {
           <Route path='/signup' render={(props) => <Signup {...props}/>} />
           <Route path='/profile/:id' render={(props) => <Profile {...props} />} />
           <Route path='/jokes' render={() => <JokesDisplay />}/>
-          <Route path='/funfacts' exact render={() => <FunFactsDisplay funFact={this.state.funFact}/>}/>
+          <Route path='/funfacts' render={() => <FunFactsDisplay funFact={this.state.funFact}/>}/>
         </main>
         <Footer />
       </div>

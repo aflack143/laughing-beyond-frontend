@@ -5,12 +5,9 @@ import Joke from './Joke'
 
 const JokesDisplay = () => {
     const [data, setData] = useState({
-        jokes: [
-            {
-            display: ''
-            }
-        ],
-        type: 'general'
+        jokes: [],
+        type: 'random',
+        display: false
     })
 
     const fetchData = (inputType) => {
@@ -21,6 +18,7 @@ const JokesDisplay = () => {
             setData(prevState=>({
                 ...prevState,
                 jokes: resp.data,
+                display: false
             }))
         })
         :
@@ -30,6 +28,7 @@ const JokesDisplay = () => {
             setData(prevState=>({
                 ...prevState,
                 jokes: resp.data,
+                display: false
             }))
         })
     }
@@ -39,11 +38,17 @@ const JokesDisplay = () => {
         console.log(data.type)
         setData(prevState=>({
             ...prevState,
-            type: event.target.value
+            type: event.target.value,
+            display: false
         }))
         console.log(data.type)
         fetchData(event.target.value)
         console.log(data.jokes)
+    }
+
+    const handleRefresh = (event) => {
+        event.preventDefault()
+        fetchData(data.type)
     }
 
     useEffect(() => {
@@ -55,14 +60,14 @@ const JokesDisplay = () => {
     return (
         <div id='jokes'>
             <h3>Jokes</h3>
-            <JokesSearch type={data.type} handleChange={handleChange}/>
+            <JokesSearch type={data.type} handleChange={handleChange} handleRefresh={handleRefresh}/>
             <div className='jokes'>
                 {jokes.map((joke) => {
+                    // let display = false
                     return(
-                        <Joke joke={joke}/>
+                        <Joke joke={joke} display={data.display}/>
                     )
                 })}
-
             </div>
         </div>
     )
