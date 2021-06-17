@@ -8,44 +8,45 @@ class FunFactsDisplay extends Component  {
         this.state = {
             funFact: '',
             type: "trivia",
-            selectedOption: null
 
         }
     }
    
-    // componentDidMount = () => {
-    //     axios.get('http://numbersapi.com/random?min=0&max=1000')
-    //     .then(resp => {
-    //         console.log(resp.data)
-    //         this.setState({
-    //             funFact: resp.data,
-    //         })
-    //     })
-    // }
-    
-    fetchData = (inputValue) => {
-        axios.get(`http://numbersapi.com/#random/${inputValue}`)
+    componentDidMount = () => {
+        axios.get('http://numbersapi.com/random?min=0&max=1000')
         .then(resp => {
             console.log(resp.data)
+            this.setState({
+                funFact: resp.data,
+            })
         })
     }
-
-    handleChange(event) {
+    
+    fetchData = (inputValue) => {
+        axios.get(`http://numbersapi.com/random/${inputValue}`)
+        .then(resp => {
+            console.log(resp.data)
+            this.setState({
+                funFact: resp.data,
+            })
+        })
+    }
+    
+    handleChange = (event) => {
         event.persist()
+        console.log('attempting to change')
         this.setState(prevState=>({
             ...prevState,
-
-          type: event.target.value
-            
+          type: event.target.value   
         }))
-      console.log(this.state.type)
+      console.log(event.target.value)
     }
 
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         // alert('here are your options' + this.state.value);
         event.preventDefault();
         console.log(this.state.type)
-        this.fetchData()
+        this.fetchData(this.state.type)
     }
 
     render() {
@@ -59,7 +60,7 @@ class FunFactsDisplay extends Component  {
                         <p className='funFact'>{funFact}</p>
                         <button><a onClick={() => {window.location.href="/funfacts"}}>New Fun Fact</a></button>
                     </div>
-                    <FunFactsSearch value={this.state.type} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+                    <FunFactsSearch type={this.state.type} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
                 </div>
             </div>
         ) 
