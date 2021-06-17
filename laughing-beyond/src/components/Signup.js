@@ -42,8 +42,9 @@ class Signup extends Component {
     render() {
         // console.log(this.state.data)
         return (
-            <div>
-                <h3>Sign Up</h3>
+        <div class="container">
+            <div id="signup">
+                <h2>Sign Up</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label for="name">Name: </label>
                     <input onChange={this.handleOnChange} type='text' name='name' placeholder='enter your name' />
@@ -56,6 +57,7 @@ class Signup extends Component {
                     <input type='submit' value='Sign Up'/>
                 </form>
             </div>
+        </div>
         )
     }
  
