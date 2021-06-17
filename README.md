@@ -49,6 +49,13 @@ Jointly created by Julia Christensen and Andrea Clark
   React, 
   Axios
   
+## URLs
+* [/ = HomePage](http://localhost:3000/)
+* [/signup](http://localhost:3000/signup)
+* [/login](http://localhost:3000/login)
+* [/profile/:id](http://localhost:3000/profile/7)
+* [/jokes](http://localhost:3000/jokes)
+* [/funfacts](http://localhost:3000/funfacts)  
 
 ## Getting Started:
 <img src="https://user-images.githubusercontent.com/80013194/122136009-430dc180-ce07-11eb-9933-9ed9701f94ff.png" width="400">
