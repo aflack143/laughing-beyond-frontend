@@ -11,17 +11,19 @@ const Joke = (props) => {
         setDisplay(!display)
     }
       
-    useEffect(() => {setJoke(props.joke)}, [props.joke], [])
+    useEffect(() => {setJoke(props.joke)}, [props.joke])
     
     return (
         <div className='joke' key={props.joke<joke}>
-            <div className='setup'>
+            <div className='jokeid'>
                 <p>#{joke.id}</p>
+            </div>
+            <div className='setup'>
                 <p>{joke.setup}</p>
             </div>
             <div className='punchline'>
                 {display &&
-                <p>{joke.punchline}</p>
+                <p id='punchline'>{joke.punchline}</p>
             }
             </div>
             <JokeButton display={display} handleClick={handleClick}/>

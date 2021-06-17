@@ -6,9 +6,9 @@ let display = props.display
     return (
         <div>
             {!display ?
-            <button onClick={props.handleClick}>Show Answer</button>
+            <button className='jokebtn show' onClick={props.handleClick}>Show Answer</button>
             :
-            <button onClick={props.handleClick}>Hide Answer</button>
+            <button className='jokebtn hide' onClick={props.handleClick}>Hide Answer</button>
             }
         </div>
     )
