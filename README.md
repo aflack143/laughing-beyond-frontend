@@ -7,7 +7,7 @@ Jointly created by Julia Christensen and Andrea Clark
 * [Link to Project 3 - backend](https://github.com/aflack143/laughing-beyond-backend)
 
 ## Brief Example:
-<img src="https://user-images.githubusercontent.com/80013194/122302001-1de08800-cec7-11eb-93dd-a8928fad6de3.png" width="700">
+<img src="https://user-images.githubusercontent.com/80013194/122334679-b5fa6380-ceff-11eb-81c5-2c0b4ed334e9.png" width="700">
 
 
 ## Features:
@@ -60,4 +60,5 @@ Jointly created by Julia Christensen and Andrea Clark
 [Link to Asana](https://app.asana.com/0/1200474893168640/list)
 
 ### Sources: 
-[Radio Button Display](https://stackoverflow.com/questions/44577673/react-js-how-do-i-set-a-checked-selected-radio-button-and-track-the-onchange)
+[Radio Button Display](https://stackoverflow.com/questions/44577673/react-js-how-do-i-set-a-checked-selected-radio-button-and-track-the-onchange)<br>
+[Rerendering Child Component when props is updated on Parent](https://stackoverflow.com/questions/38892672/react-why-child-component-doesnt-update-when-prop-changes)
