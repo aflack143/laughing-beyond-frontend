@@ -5,12 +5,8 @@ import Joke from './Joke'
 
 const JokesDisplay = () => {
     const [data, setData] = useState({
-        jokes: [
-            {
-            display: ''
-            }
-        ],
-        type: 'general'
+        jokes: [],
+        type: 'random'
     })
 
     const fetchData = (inputType) => {

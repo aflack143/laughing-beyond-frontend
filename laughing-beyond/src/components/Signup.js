@@ -42,22 +42,32 @@ class Signup extends Component {
     render() {
         // console.log(this.state.data)
         return (
-        <div class="container">
-            <div id="signup">
-                <h2>Sign Up</h2>
-                <form onSubmit={this.handleSubmit}>
-                    <label for="name">Name: </label>
-                    <input onChange={this.handleOnChange} type='text' name='name' placeholder='enter your name' />
-                    <label for="email">Email: </label>
-                    <input onChange={this.handleOnChange} type='email' name='email' placeholder='enter your email address' />
-                    <label for="username">Username: </label>
-                    <input onChange={this.handleOnChange} type='text' name='username' placeholder='create username' />
-                    <label for="password">Password: </label>
-                    <input onChange={this.handleOnChange} type='password' name='password' placeholder='create password' />
-                    <input type='submit' value='Sign Up'/>
-                </form>
+            <div className="user">
+                <div className="container">
+                    <div id="signup">
+                        <h2>Sign Up</h2>
+                        <form onSubmit={this.handleSubmit}>
+                            <div>
+                                <label for="name">Name: </label>
+                                <input onChange={this.handleOnChange} type='text' name='name' placeholder='enter your name' />
+                            </div>
+                            <div> 
+                                <label for="email">Email: </label>
+                                <input onChange={this.handleOnChange} type='email' name='email' placeholder='enter your email address' />
+                            </div>
+                            <div>
+                                <label for="username">Username: </label>
+                                <input onChange={this.handleOnChange} type='text' name='username' placeholder='create username' />
+                            </div>
+                            <div>
+                                <label for="password">Password: </label>
+                                <input onChange={this.handleOnChange} type='password' name='password' placeholder='create password' />
+                            </div>
+                            <input className='formbtn' type='submit' value='Sign Up'/>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
         )
     }
  

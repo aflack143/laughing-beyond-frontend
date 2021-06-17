@@ -1,40 +1,32 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import JokeButton from './JokeButton'
 
-class Joke extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            joke: props.joke,
-            display: false
-        }
-    }
+const Joke = (props) => {
 
-handleClick = (event) => {
-    event.preventDefault()
-    this.setState(prevState=> ({
-        ...prevState, 
-        display: !this.state.display
-    }))
-}
-    render() {
-        const joke = this.state.joke
-        const display = this.state.display
-        return (
-            <div className='joke'>
-                <div className='setup'>
-                    <p>#{joke.id}</p>
-                    <p>{joke.setup}</p>
-                </div>
-                <div className='punchline'>
-                    {display &&
-                    <p>{joke.punchline}</p>
-                }
-                </div>
-                <JokeButton display={display} handleClick={this.handleClick}/>
-            </div>
-        )
+    const [joke, setJoke] = useState(props.joke)
+    const [display, setDisplay] = useState(false)
+
+    const handleClick = (event) => {
+        event.preventDefault()
+        setDisplay(!display)
     }
+      
+    useEffect(() => {setJoke(props.joke)}, [props.joke], [])
+    
+    return (
+        <div className='joke' key={props.joke<joke}>
+            <div className='setup'>
+                <p>#{joke.id}</p>
+                <p>{joke.setup}</p>
+            </div>
+            <div className='punchline'>
+                {display &&
+                <p>{joke.punchline}</p>
+            }
+            </div>
+            <JokeButton display={display} handleClick={handleClick}/>
+        </div>
+    )
 }
 
 export default Joke
