@@ -8,6 +8,7 @@ class FunFactsDisplay extends Component  {
         this.state = {
             funFact: '',
             type: "trivia",
+            display: false
 
         }
     }
@@ -49,6 +50,8 @@ class FunFactsDisplay extends Component  {
         this.fetchData(this.state.type)
     }
 
+    
+
     render() {
         const funFact = this.state.funFact
         console.log(this.state.type)
@@ -58,9 +61,9 @@ class FunFactsDisplay extends Component  {
                 <div>
                     <div className='factcontainter'>
                         <p className='funFact'>{funFact}</p>
-                        <button><a onClick={() => {window.location.href="/funfacts"}}>New Fun Fact</a></button>
+                        <button><a onClick={this.handleSubmit}>New Fun Fact</a></button>
                     </div>
-                    <FunFactsSearch type={this.state.type} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                    <FunFactsSearch display={this.state.display} type={this.state.type} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
                 </div>
             </div>
         ) 
