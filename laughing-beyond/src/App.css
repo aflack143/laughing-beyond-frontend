@@ -380,24 +380,26 @@ max-width: 100%;
 .home-btn button {
   width: 150px;
   height: 150px;
-  border: mediumblue 5px solid;
+  border: black 5px solid;
   border-radius: 100%;
-  background-image: url(./images/emoji.png);
+  background-image: url(./images/search-icon.png);
+  /* background-image: url(./images/emoji.png); */
+  /* background-image: url(https://www.kindpng.com/picc/m/69-698613_search-icon-blue-circle-blue-search-icon-png.png); */
   background-position: center;
-  background-size: 500px;
+  background-size: 150px;
+}
+
+.home-btn button a {
+  height: 100%;
 }
 
 .home-content {
-  min-width: 75%;
-  flex-grow: 2;
-}
-
-.home-joke, .home-fact {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 60%;
-  border: orange 2px solid;
+  flex-grow: 2;
+  border: black 2px solid;
   background-color: rgba(173, 216, 230, 0.534);
   height: 30vh;
   padding: 5px 20px;

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import Boop from "./Boop"
 
 class Home extends Component  {
     constructor(props) {
@@ -27,6 +28,13 @@ class Home extends Component  {
         })
     }
 
+    // handleClick = (input) => {
+    //     input === 'jokes' ?
+    //     <Link to='/jokes'/>
+    //     :
+    //     <Link to='/funfacts'/>
+    // }
+
     render(){
         const joke = this.state.joke
         return (
@@ -38,7 +46,9 @@ class Home extends Component  {
                         <p>{joke.punchline}</p>
                     </div>
                     <div className='home-btn'>
-                        <button><Link to='/jokes'>Click for more jokes</Link></button>
+                    <Boop rotation={720} timing={3000}>
+                        <button><Link to='/jokes'>Click for more Jokes</Link></button>
+                        </Boop>
                     </div>
                 </div>
                 <div className="home-container2">
@@ -46,7 +56,9 @@ class Home extends Component  {
                         <p>{this.state.funFact}</p>
                     </div>
                     <div className='home-btn'>
-                        <button><Link to='/funfacts'>Click for more fun facts</Link></button>
+                    <Boop rotation={720} timing={3000}>
+                        <button><Link to='/funfacts'>Click for more Fun Facts</Link></button>
+                        </Boop>
                     </div>
                 </div>
             </div>
