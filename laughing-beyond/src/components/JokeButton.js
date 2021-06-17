@@ -1,9 +1,16 @@
 import React from 'react'
 
 const JokeButton = (props) => {
+let display = props.display
 
     return (
-        <button>Show Answer</button>
+        <div>
+            {!display ?
+            <button onClick={props.handleClick}>Show Answer</button>
+            :
+            <button onClick={props.handleClick}>Hide Answer</button>
+            }
+        </div>
     )
 }
 
