@@ -27,8 +27,6 @@ class Login extends Component {
         console.log('User Logging In')
         axios.post("http://localhost:3001/auth/login", this.state.data)
         .then(resp => {
-            console.log("User Logged In")
-            console.log(resp)
             this.props.history.push(`/profile/${resp.data.user.id}`)
         })
         .catch(err => {

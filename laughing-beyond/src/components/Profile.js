@@ -23,7 +23,6 @@ class Profile extends Component {
             this.setState({
                 user: resp.data
             })
-            console.log(this.state.user)
         })
     }
 
@@ -47,7 +46,6 @@ class Profile extends Component {
                 display: false
                 }
             }))
-            console.log("Editing Profile")
         })
     }
 
@@ -56,7 +54,6 @@ class Profile extends Component {
 
         await axios.delete(`http://localhost:3001/user/profile/${this.props.match.params.id}`)
         .then (() => {
-            console.log("Deleting Profile");
             this.props.history.push('/')
         })
     }
@@ -88,7 +85,9 @@ class Profile extends Component {
                             {user.display &&
                             <EditProfile 
                                 user={user} 
-                                handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleDelete={this.handleDelete}
+                                handleChange={this.handleChange} 
+                                handleSubmit={this.handleSubmit} 
+                                handleDelete={this.handleDelete}
                                 />
                             }
                             {!user.display &&

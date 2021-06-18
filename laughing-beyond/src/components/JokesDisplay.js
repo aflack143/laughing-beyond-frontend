@@ -14,7 +14,6 @@ const JokesDisplay = () => {
         inputType === 'random' ?
         axios.get('https://official-joke-api.appspot.com/jokes/ten')
         .then(resp => {
-            console.log(resp.data)
             setData(prevState=>({
                 ...prevState,
                 jokes: resp.data,
@@ -24,7 +23,6 @@ const JokesDisplay = () => {
         :
         axios.get(`https://official-joke-api.appspot.com/jokes/${inputType}/ten`)
         .then(resp => {
-            console.log(resp.data)
             setData(prevState=>({
                 ...prevState,
                 jokes: resp.data,
@@ -35,15 +33,12 @@ const JokesDisplay = () => {
 
     const handleChange = (event) => {
         event.preventDefault()
-        console.log(data.type)
         setData(prevState=>({
             ...prevState,
             type: event.target.value,
             display: false
         }))
-        console.log(data.type)
         fetchData(event.target.value)
-        console.log(data.jokes)
     }
 
     const handleRefresh = (event) => {

@@ -16,7 +16,6 @@ class FunFactsDisplay extends Component  {
     componentDidMount = () => {
         axios.get('http://numbersapi.com/random?min=0&max=1000')
         .then(resp => {
-            console.log(resp.data)
             this.setState({
                 funFact: resp.data,
             })
@@ -26,7 +25,6 @@ class FunFactsDisplay extends Component  {
     fetchData = (inputValue) => {
         axios.get(`http://numbersapi.com/random/${inputValue}`)
         .then(resp => {
-            console.log(resp.data)
             this.setState({
                 funFact: resp.data,
             })
@@ -35,32 +33,25 @@ class FunFactsDisplay extends Component  {
     
     handleChange = (event) => {
         event.persist()
-        console.log('attempting to change')
         this.setState(prevState=>({
             ...prevState,
           type: event.target.value   
         }))
-      console.log(event.target.value)
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.type)
         this.fetchData(this.state.type)
     }
 
-    
-
     render() {
-        const funFact = this.state.funFact
-        console.log(this.state.type)
         return (
             <div id='funFacts'>
                 <div id='ffcontainer'>
                     <div className='factcontainter'>
                         <div className='factbox'>
                             <h3>Fun Facts with Numbers</h3>
-                            <p className='funFact'>{funFact}</p>
+                            <p className='funFact'>{this.state.funFact}</p>
                         </div>
                         <div className='searchbox'>
                             <div className='factrefresh'>

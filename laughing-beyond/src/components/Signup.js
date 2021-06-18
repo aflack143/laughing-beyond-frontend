@@ -11,7 +11,6 @@ class Signup extends Component {
                 email:"",
                 username:"",
                 password:"",
-
             }
         }
     }
@@ -27,10 +26,8 @@ class Signup extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log('user starting!')
         axios.post("http://localhost:3001/auth/signup", this.state.data)
         .then(resp => {
-            console.log("user created!")
             // console.log(resp)
             this.props.history.push(`/profile/${resp.data.user.id}`)
         })
@@ -70,7 +67,6 @@ class Signup extends Component {
             </div>
         )
     }
- 
 }
 
 export default Signup

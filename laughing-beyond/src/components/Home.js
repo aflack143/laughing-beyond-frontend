@@ -16,7 +16,6 @@ class Home extends Component  {
     componentDidMount = () => {
         axios.get('https://official-joke-api.appspot.com/random_joke')
         .then(resp => {
-            console.log(resp.data)
             this.setState({
                 joke: resp.data,
                 display: false
@@ -33,10 +32,8 @@ class Home extends Component  {
 
     handleClick = (event) => {
         event.preventDefault();
-        console.log('before click')
         this.setState({
             display: !this.state.display})
-        console.log('after click')
     }
 
     render(){

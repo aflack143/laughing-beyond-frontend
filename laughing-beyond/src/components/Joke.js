@@ -15,16 +15,13 @@ const Joke = (props) => {
     
     return (
         <div className='joke' key={props.display!==display}>
-            {/* <div className='jokeid'>
-                <p>#{joke.id}</p>
-            </div> */}
             <div className='setup'>
                 <p>{joke.setup}</p>
             </div>
             <div className='punchline'>
                 {display &&
                 <p id='punchline'>{joke.punchline}</p>
-            }
+                }
             </div>
             <JokeButton display={display} handleClick={handleClick}/>
         </div>

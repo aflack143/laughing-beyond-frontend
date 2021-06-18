@@ -10,7 +10,6 @@ const JokesSearch = (props) => {
                 <label className='radiobtn' for='random'> <input className='radiobtn' type='radio' name='type' value='random' checked={props.type === 'random'}/>Random</label>
             </fieldset>
             <button id='refreshbtn' onClick={props.handleRefresh}>Refresh Jokes</button>
-            {/* <button id='showAnswer' onClick={props.handleRefresh}>Show all answers</button> */}
         </div>
     )
 }
