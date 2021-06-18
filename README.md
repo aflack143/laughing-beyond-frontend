@@ -1,15 +1,17 @@
 # Laughing&Beyond (frontend)
 
 ## Description:
-A collection of Jokes, FunFacts and Quotes for laughter, learning and inspiration. 
+A collection of Jokes and FunFacts for laughter, learning and inspiration. 
 Jointly created by Julia Christensen and Andrea Clark
 * [Link to Project 3 - frontend](https://github.com/aflack143/laughing-beyond-frontend)
 * [Link to Project 3 - backend](https://github.com/aflack143/laughing-beyond-backend)
 
 ## Brief Example:
-<img src="https://user-images.githubusercontent.com/80013194/122334679-b5fa6380-ceff-11eb-81c5-2c0b4ed334e9.png" width="600">
-<img src="https://user-images.githubusercontent.com/80013194/122523299-7a819700-cfdc-11eb-8e6b-544d38343e7c.png" width="600">
-<img src="https://user-images.githubusercontent.com/80013194/122523473-aa309f00-cfdc-11eb-9895-5f2a84683d43.png" width="600">
+Screenshots from website: <br>
+<img src="https://user-images.githubusercontent.com/80013194/122523473-aa309f00-cfdc-11eb-9895-5f2a84683d43.png" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/80013194/122622081-2e2a6b80-d05d-11eb-8d46-6ad0232fbe0d.png" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/80013194/122523299-7a819700-cfdc-11eb-8e6b-544d38343e7c.png" width="100" height="100">
+
 
 ## Features:
 **_Bronze_**:
@@ -68,6 +70,13 @@ Jointly created by Julia Christensen and Andrea Clark
 [Link to Asana](https://app.asana.com/0/1200474893168640/list)
 
 ### Sources: 
-[Radio Button Display](https://stackoverflow.com/questions/44577673/react-js-how-do-i-set-a-checked-selected-radio-button-and-track-the-onchange)<br>
-[Rerendering Child Component when props is updated on Parent](https://stackoverflow.com/questions/38892672/react-why-child-component-doesnt-update-when-prop-changes)<br>
-[Hover Animation](https://www.joshwcomeau.com/react/boop/)
+API's used:<br>
+ * [Jokes API](https://github.com/15Dkatz/official_joke_api)
+   * [Jokes API-Demo](https://official-joke-api.appspot.com/random_joke)
+ * [Numbers API](http://numbersapi.com/)
+
+Other sources used:<br>
+ * [Radio Button Display](https://stackoverflow.com/questions/44577673/react-js-how-do-i-set-a-checked-selected-radio-button-and-track-the-onchange)<br>
+ * [Rerendering Child Component when props is updated on Parent](https://stackoverflow.com/questions/38892672/react-why-child-component-doesnt-update-when-prop-changes)<br>
+ * [Hover Animation](https://www.joshwcomeau.com/react/boop/)
+ * [Setting state within an array of children](https://medium.com/swlh/the-setstate-hook-for-setting-state-on-an-array-of-children-11e6437880da)
