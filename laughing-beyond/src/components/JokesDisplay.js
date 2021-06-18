@@ -63,7 +63,7 @@ const JokesDisplay = () => {
             <JokesSearch type={data.type} handleChange={handleChange} handleRefresh={handleRefresh}/>
             <div className='jokes'>
                 {jokes.map((joke) => {
-                    // let display = false
+                    console.log(joke)
                     return(
                         <Joke joke={joke} display={data.display}/>
                     )

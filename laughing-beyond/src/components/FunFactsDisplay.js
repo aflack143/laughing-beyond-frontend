@@ -44,7 +44,6 @@ class FunFactsDisplay extends Component  {
     }
 
     handleSubmit = (event) => {
-        // alert('here are your options' + this.state.value);
         event.preventDefault();
         console.log(this.state.type)
         this.fetchData(this.state.type)
@@ -57,19 +56,27 @@ class FunFactsDisplay extends Component  {
         console.log(this.state.type)
         return (
             <div id='funFacts'>
-                <h3>Fun Facts with Numbers</h3>
-                <div>
-                   
                     <div className='factcontainter'>
-                    <p className='funFact'>{funFact}</p>
-                    <FunFactsSearch display={this.state.display} type={this.state.type} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-                    <button><a onClick={this.handleSubmit}>New Fun Fact</a></button>
-                      
-                        
-                       
+                        <div className='factbox'>
+                            <h3>Fun Facts with Numbers</h3>
+                            <p className='funFact'>{funFact}</p>
+                        </div>
+                        <div className='searchbox'>
+                            <div className='factrefresh'>
+                                <button>
+                                    <a onClick={this.handleSubmit}>New Fun Fact</a>
+                                </button>
+                            </div>
+                            <div className='factsearch'>
+                                <FunFactsSearch 
+                                    display={this.state.display} 
+                                    type={this.state.type}
+                                    handleChange={this.handleChange} 
+                                    handleSubmit={this.handleSubmit}
+                                    />
+                            </div>
+                        </div>
                     </div>
-                   
-                </div>
             </div>
         ) 
     }

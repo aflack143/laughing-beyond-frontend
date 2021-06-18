@@ -1,14 +1,15 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import Boop from "./Boop"
+import Hover from "./Hover"
 
 class Home extends Component  {
     constructor(props) {
         super(props)
         this.state = {
             joke: [],
-            funFact: ''
+            funFact: '',
+            display: false
         }
     }
 
@@ -17,23 +18,26 @@ class Home extends Component  {
         .then(resp => {
             console.log(resp.data)
             this.setState({
-                joke: resp.data
+                joke: resp.data,
+                display: false
             })
         })
         axios.get('http://numbersapi.com/random?min=0&max=1000')
         .then(resp => {
             this.setState({
                 funFact: resp.data,
+                display: false
             })
         })
     }
 
-    // handleClick = (input) => {
-    //     input === 'jokes' ?
-    //     <Link to='/jokes'/>
-    //     :
-    //     <Link to='/funfacts'/>
-    // }
+    handleClick = (event) => {
+        event.preventDefault();
+        console.log('before click')
+        this.setState({
+            display: !this.state.display})
+        console.log('after click')
+    }
 
     render(){
         const joke = this.state.joke
@@ -43,12 +47,20 @@ class Home extends Component  {
                 <div className="home-container1">
                     <div className='home-joke home-content'>
                         <p>{joke.setup}</p>
-                        <p>{joke.punchline}</p>
+                        {this.state.display ?
+                        <p id='homePunchline'>{joke.punchline}</p>
+                        :
+                        <button onClick={this.handleClick}>Show Answer</button>
+                        }
                     </div>
                     <div className='home-btn'>
-                    <Boop rotation={720} timing={3000}>
-                        <button><Link to='/jokes'>Click for more Jokes</Link></button>
-                        </Boop>
+                    <Hover rotation={720} timing={2000}>
+                        <button>
+                            <Link to='/jokes'>
+                                Click for more Jokes
+                            </Link>
+                        </button>
+                    </Hover>
                     </div>
                 </div>
                 <div className="home-container2">
@@ -56,9 +68,13 @@ class Home extends Component  {
                         <p>{this.state.funFact}</p>
                     </div>
                     <div className='home-btn'>
-                    <Boop rotation={720} timing={3000}>
-                        <button><Link to='/funfacts'>Click for more Fun Facts</Link></button>
-                        </Boop>
+                    <Hover rotation={-720} timing={2000}>
+                        <button>
+                            <Link to='/funfacts'>
+                                Click for more Fun Facts
+                            </Link>
+                        </button>
+                    </Hover>
                     </div>
                 </div>
             </div>
