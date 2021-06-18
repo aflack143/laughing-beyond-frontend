@@ -135,10 +135,6 @@
   padding: 0;
   background-color: black;
   color: orange;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: space-around;
 }
 
 .jokes {
@@ -148,7 +144,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: space-around;
+  align-content: space-evenly;
   font-weight: bold;
 }
 
@@ -165,15 +161,25 @@
   padding: 5px;
 }
 
-.hide {
+.hide, #hide-btn {
   background-color: rgba(0, 0, 0, .6);
   color: orange;
   border-color: orange;
 }
-.show, #refreshbtn {
+#hide-btn {
+  background-color: rgb(59, 52, 29);
+}
+.show, #refreshbtn, #show-btn {
   color: black;
   background-color: orange;
   border-color: orange;
+}
+
+#refreshbtn, #show-btn, #hide-btn {
+  margin: 0 auto;
+  padding: 0;
+  width: 10%;
+  height: 50px;
 }
 
 .jokebtn {
@@ -189,13 +195,6 @@
   align-items: center;
   justify-content: center;
 }
-
-/* .jokeid {
-  height: 10%;
-  margin: 0;
-  padding: 0;
-} */
-
 
 .setup {
   height: 50%;
@@ -219,9 +218,10 @@
 }
 
 .jokesearch {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
-  height: 15px;
+  height: 50px;
+  padding: 0;
   border-color: orange;
   font-weight: bold;
   display: flex;
@@ -250,11 +250,6 @@ input.radiobtn {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0;
-}
-
-#refreshbtn {
-  margin: 0 auto;
   padding: 0;
 }
 
@@ -507,7 +502,6 @@ max-width: 100%;
 }
 
 .home-joke p, .home-joke button  {
-  /* height: 50%; */
   display: flex;
   align-items: center;
 }

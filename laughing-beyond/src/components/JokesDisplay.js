@@ -7,26 +7,32 @@ const JokesDisplay = () => {
     const [data, setData] = useState({
         jokes: [],
         type: 'random',
-        display: false
+        allDisplay: false
     })
 
     const fetchData = (inputType) => {
         inputType === 'random' ?
         axios.get('https://official-joke-api.appspot.com/jokes/ten')
         .then(resp => {
+            const allJokes = resp.data
+            allJokes.forEach(joke => {
+            joke.display = false;
+            })
             setData(prevState=>({
                 ...prevState,
-                jokes: resp.data,
-                display: false
+                jokes: allJokes,
             }))
         })
         :
         axios.get(`https://official-joke-api.appspot.com/jokes/${inputType}/ten`)
         .then(resp => {
+            const allJokes = resp.data
+            allJokes.forEach(joke => {
+            joke.display = false;
+            })
             setData(prevState=>({
                 ...prevState,
-                jokes: resp.data,
-                display: false
+                jokes: allJokes,
             }))
         })
     }
@@ -43,24 +49,63 @@ const JokesDisplay = () => {
 
     const handleRefresh = (event) => {
         event.preventDefault()
+        setData(prevState=>({
+            ...prevState,
+            display: false,
+            allDisplay: false
+        }))
         fetchData(data.type)
+        console.log(jokes)
     }
 
     useEffect(() => {
         fetchData(data.type)
     }, [])
+
+    const handleHide = (event) => {
+        event.preventDefault()
+        const allJokes = jokes
+        allJokes.forEach(joke => {
+            joke.display = false;
+        })
+            setData(prevState=>({
+                ...prevState,
+                jokes: allJokes,
+                allDisplay: false
+            }))
+    }
+
+    const handleShow = (event) => {
+        event.preventDefault()
+        const allJokes = jokes
+        allJokes.forEach(joke => {
+            joke.display = true;
+            })
+            setData(prevState=>({
+                ...prevState,
+                jokes: allJokes,
+                allDisplay: true
+            }))
+    }
     
     const jokes = data.jokes
 
     return (
         <div id='jokes'>
             <h3>Jokes</h3>
-            <JokesSearch type={data.type} handleChange={handleChange} handleRefresh={handleRefresh}/>
+            <JokesSearch 
+            type={data.type} 
+            allDisplay={data.allDisplay} 
+            handleChange={handleChange} 
+            handleRefresh={handleRefresh}
+            handleHide={handleHide}
+            handleShow={handleShow}
+            />
             <div className='jokes'>
                 {jokes.map((joke) => {
                     console.log(joke)
                     return(
-                        <Joke joke={joke} display={data.display}/>
+                        <Joke joke={joke}/>
                     )
                 })}
             </div>

@@ -3,6 +3,11 @@ import React from 'react'
 const JokesSearch = (props) => {
     return (
         <div id="jokesearch">
+            {props.allDisplay ?
+            <button id='hide-btn' onClick={props.handleHide}>Hide All Answers</button>
+            :
+            <button id='show-btn' onClick={props.handleShow}>Show All Answers</button>
+            }
             <fieldset className="jokesearch" onChange={props.handleChange}>
                 <label className='radiobtn' for='general'><input className='radiobtn' type='radio' name='type' value='general' checked={props.type === 'general'}/>General</label>
                 <label className='radiobtn' for='programming'> <input className='radiobtn' type='radio' name='type' value='programming' checked={props.type === 'programming'}/>Programming</label>
