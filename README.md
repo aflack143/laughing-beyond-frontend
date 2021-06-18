@@ -8,8 +8,8 @@ Jointly created by Julia Christensen and Andrea Clark
 
 ## Brief Example:
 <img src="https://user-images.githubusercontent.com/80013194/122334679-b5fa6380-ceff-11eb-81c5-2c0b4ed334e9.png" width="600">
-<img src="https://user-images.githubusercontent.com/80013194/122508367-81ea7580-cfc7-11eb-812c-c7f3a4048663.png" width="600">
-
+<img src="https://user-images.githubusercontent.com/80013194/122523299-7a819700-cfdc-11eb-8e6b-544d38343e7c.png" width="600">
+<img src="https://user-images.githubusercontent.com/80013194/122523473-aa309f00-cfdc-11eb-9895-5f2a84683d43.png" width="600">
 
 ## Features:
 **_Bronze_**:
