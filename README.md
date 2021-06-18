@@ -7,7 +7,8 @@ Jointly created by Julia Christensen and Andrea Clark
 * [Link to Project 3 - backend](https://github.com/aflack143/laughing-beyond-backend)
 
 ## Brief Example:
-<img src="https://user-images.githubusercontent.com/80013194/122334679-b5fa6380-ceff-11eb-81c5-2c0b4ed334e9.png" width="700">
+<img src="https://user-images.githubusercontent.com/80013194/122334679-b5fa6380-ceff-11eb-81c5-2c0b4ed334e9.png" width="600">
+<img src="https://user-images.githubusercontent.com/80013194/122508367-81ea7580-cfc7-11eb-812c-c7f3a4048663.png" width="600">
 
 
 ## Features:
@@ -68,4 +69,5 @@ Jointly created by Julia Christensen and Andrea Clark
 
 ### Sources: 
 [Radio Button Display](https://stackoverflow.com/questions/44577673/react-js-how-do-i-set-a-checked-selected-radio-button-and-track-the-onchange)<br>
-[Rerendering Child Component when props is updated on Parent](https://stackoverflow.com/questions/38892672/react-why-child-component-doesnt-update-when-prop-changes)
+[Rerendering Child Component when props is updated on Parent](https://stackoverflow.com/questions/38892672/react-why-child-component-doesnt-update-when-prop-changes)<br>
+[Hover Animation](https://www.joshwcomeau.com/react/boop/)
