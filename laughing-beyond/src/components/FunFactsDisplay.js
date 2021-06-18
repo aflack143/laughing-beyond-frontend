@@ -59,11 +59,16 @@ class FunFactsDisplay extends Component  {
             <div id='funFacts'>
                 <h3>Fun Facts with Numbers</h3>
                 <div>
+                   
                     <div className='factcontainter'>
-                        <p className='funFact'>{funFact}</p>
-                        <button><a onClick={this.handleSubmit}>New Fun Fact</a></button>
-                    </div>
+                    <p className='funFact'>{funFact}</p>
                     <FunFactsSearch display={this.state.display} type={this.state.type} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                    <button><a onClick={this.handleSubmit}>New Fun Fact</a></button>
+                      
+                        
+                       
+                    </div>
+                   
                 </div>
             </div>
         ) 

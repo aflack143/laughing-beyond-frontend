@@ -9,7 +9,7 @@ const [display, setDisplay] = useState(props.display)
        setDisplay(!display)
    } 
         return (
-            <div className='factsSearch'>
+            <div >
             {!display ?
                 <button onClick={handleClick}>Show Search</button>
             :
