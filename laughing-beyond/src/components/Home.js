@@ -43,7 +43,7 @@ class Home extends Component  {
         const joke = this.state.joke
         return (
             <div id="home">
-                <h3>Home Page</h3>
+                <h3>Welcome!</h3>
                 <div className="home-container1">
                     <div className='home-joke home-content'>
                         <p>{joke.setup}</p>
@@ -55,11 +55,11 @@ class Home extends Component  {
                     </div>
                     <div className='home-btn'>
                     <Hover rotation={720} timing={2000}>
-                        <button>
-                            <Link to='/jokes'>
+                       <Link to='/jokes'>
+                            <button>
                                 Click for more Jokes
-                            </Link>
-                        </button>
+                            </button>
+                        </Link>
                     </Hover>
                     </div>
                 </div>
@@ -69,11 +69,11 @@ class Home extends Component  {
                     </div>
                     <div className='home-btn'>
                     <Hover rotation={-720} timing={2000}>
-                        <button>
-                            <Link to='/funfacts'>
+                        <Link to='/funfacts'>
+                            <button>
                                 Click for more Fun Facts
-                            </Link>
-                        </button>
+                            </button>
+                        </Link>
                     </Hover>
                     </div>
                 </div>

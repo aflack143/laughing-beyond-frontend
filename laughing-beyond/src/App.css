@@ -5,12 +5,14 @@
   flex-direction: column;
   margin: 0;
   min-height: 100vh;
+  font-family: 'Mate SC', serif;
+  font-size: 20px;
 }
 
 #funFacts {
   background: url('https://static7.depositphotos.com/1278966/761/i/600/depositphotos_7616729-stock-photo-numbers-background-light.jpg') center no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 81vh;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -127,12 +129,16 @@
 #jokes {
   background: url('https://t3.ftcdn.net/jpg/01/63/24/34/360_F_163243451_uNQ0OqyR2FCAqkwRonQUH7KcdBTW6Bkr.jpg') center no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 81vh;
   width: 100%;
   margin: 0;
   padding: 0;
   background-color: black;
   color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-around;
 }
 
 .jokes {
@@ -149,8 +155,8 @@
 .joke {
   color: black;
   background-color: rgba(248, 196, 26, 0.712);
-  width: 17%;
-  height: 300px;
+  width: 18%;
+  height: 275px;
   min-height: fit-content;
   display: flex;
   flex-direction: column;
@@ -160,12 +166,19 @@
 }
 
 .hide {
-  background-color: black;
+  background-color: rgba(0, 0, 0, .6);
   color: orange;
+  border-color: orange;
 }
 .show, #refreshbtn {
   color: black;
   background-color: orange;
+  border-color: orange;
+}
+
+.jokebtn {
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .joke p {
@@ -177,13 +190,15 @@
   justify-content: center;
 }
 
-.jokeid {
+/* .jokeid {
   height: 10%;
   margin: 0;
   padding: 0;
-}
+} */
+
+
 .setup {
-  height: 40%;
+  height: 50%;
   margin: 0;
   padding: 0;
 }
@@ -198,8 +213,9 @@
   height: 100%;
   margin: 0 auto;
   padding: 0 2px;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, .6);
   color: orange;
+  font-weight: 500;
 }
 
 .jokesearch {
@@ -211,7 +227,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: rgba(248, 196, 26, 0.412);
+  background-color: rgba(248, 196, 26, 0.612);
   color: black;
 }
 
@@ -273,14 +289,14 @@ nav {
 
 main {
   flex-grow: 1;
-  min-height: 80vh;
+  min-height: 81vh;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
 footer {
-  height: 7vh;
+  height: 6vh;
   text-align: center;
   background-color: #ffa600;
   background-repeat: no-repeat;
@@ -297,6 +313,7 @@ a {
 
 button {
   cursor: pointer;
+  font: inherit
 }
 
 h3 {
@@ -307,7 +324,7 @@ h3 {
 
 .user {
   margin: 0;
-  min-height: 80vh;
+  min-height: 81vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -322,14 +339,15 @@ h2 {
   width: 500px;
   margin: 0 auto;
 }
-input, 
-select, textarea{
+
+input, select, textarea{
   width: 400px;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  font: inherit
 }
 
 label {
@@ -417,7 +435,7 @@ max-width: 100%;
 #home {
   background: url('https://freerangestock.com/sample/52688/colourful-wave-background-shows-wavy-design-artwork-.jpg') center no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 81vh;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -425,6 +443,7 @@ max-width: 100%;
   flex-direction: column;
   justify-items: center;
   flex-wrap: nowrap;
+  color: darkblue
 }
 
 .home-container1 {
@@ -450,17 +469,19 @@ max-width: 100%;
 .home-btn button {
   width: 150px;
   height: 150px;
-  border: black 5px solid;
+  border: darkblue 5px solid;
   border-radius: 100%;
   background-image: url(./images/search-icon.png);
   background-position: center;
   background-size: 150px;
 }
 
+.home-btn button {
+  color: darkblue;
+  text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;
+}
 .home-btn button a {
   height: 100%;
-  color: black;
-  text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;
 }
 
 .home-content {
@@ -469,7 +490,7 @@ max-width: 100%;
   margin: 0 auto;
   width: 60%;
   flex-grow: 2;
-  border: gold 2px solid;
+  border: darkblue 2px solid;
   background-color: rgba(173, 216, 230, 0.534);
   height: 30vh;
   padding: 5px 20px;
@@ -503,8 +524,8 @@ max-width: 100%;
 
 .home-joke button {
   background-color: gold;
-  color: rgb(3, 116, 168);
-  border: rgb(3, 116, 168) 2px solid;
+  color: darkblue;
+  border: darkblue 2px solid;
   border-radius: 4px;
   width: 250px;
   height: fit-content;

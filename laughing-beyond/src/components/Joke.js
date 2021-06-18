@@ -15,9 +15,9 @@ const Joke = (props) => {
     
     return (
         <div className='joke' key={props.display!==display}>
-            <div className='jokeid'>
+            {/* <div className='jokeid'>
                 <p>#{joke.id}</p>
-            </div>
+            </div> */}
             <div className='setup'>
                 <p>{joke.setup}</p>
             </div>

@@ -6,7 +6,6 @@ const Hover = ({ rotation = 0, timing = 150, children }) => {
     const style = {
       display: 'inline-block',
       backfaceVisibility: 'hidden',
-      backgroundColor: 'yellow',
       transform: isHovered
         ? `rotate(${rotation}deg)`
         : `rotate(0deg)`,

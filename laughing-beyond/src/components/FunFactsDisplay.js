@@ -56,6 +56,7 @@ class FunFactsDisplay extends Component  {
         console.log(this.state.type)
         return (
             <div id='funFacts'>
+                <div id='ffcontainer'>
                     <div className='factcontainter'>
                         <div className='factbox'>
                             <h3>Fun Facts with Numbers</h3>
@@ -77,6 +78,7 @@ class FunFactsDisplay extends Component  {
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         ) 
     }
