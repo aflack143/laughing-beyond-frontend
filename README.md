@@ -3,8 +3,8 @@
 ## Description:
 A collection of Jokes and FunFacts for laughter, learning and inspiration. 
 Jointly created by Julia Christensen and Andrea Clark
-* [Link to Project 3 - frontend](https://github.com/aflack143/laughing-beyond-frontend)
-* [Link to Project 3 - backend](https://github.com/aflack143/laughing-beyond-backend)
+* [Repository for Project 3 - frontend](https://github.com/aflack143/laughing-beyond-frontend)
+* [Repository for Project 3 - backend](https://github.com/aflack143/laughing-beyond-backend)
 
 ## Brief Example:
 Screenshots from website: <br>
@@ -12,6 +12,7 @@ Screenshots from website: <br>
 <img src="https://user-images.githubusercontent.com/80013194/122622081-2e2a6b80-d05d-11eb-8d46-6ad0232fbe0d.png" width="100" height="100">
 <img src="https://user-images.githubusercontent.com/80013194/122523299-7a819700-cfdc-11eb-8e6b-544d38343e7c.png" width="100" height="100">
 
+Demo: http://laughing-beyond.surge.sh/
 
 ## Features:
 **_Bronze_**:
@@ -66,9 +67,24 @@ Screenshots from website: <br>
 <img src="https://user-images.githubusercontent.com/80013194/122136034-5325a100-ce07-11eb-8ba2-ba1cb73bd887.jpg" width="400">
 
 **_Key notes_**: 
-
 [Link to Asana](https://app.asana.com/0/1200474893168640/list)
 
+**Aha! Moment:**
+When coding, we were struggling to add a new key/value pair to each of the children of my array object. A workaround was to map them then to a new component page then add the separate key/value for the jokes page allowing to toggle the show/hide button. This worked as an alternate, but we really wanted to know the right way to accomplish this same task. Thankfully we found this [website](https://medium.com/swlh/the-setstate-hook-for-setting-state-on-an-array-of-children-11e6437880da) and it worked like a charm!<br>
+Here is a sample of the updated code that uses .forEach to update the inner child key/value:<br>
+```js 
+   axios.get('https://official-joke-api.appspot.com/jokes/ten')
+        .then(resp => {
+            const allJokes = resp.data
+            allJokes.forEach(joke => {
+            joke.display = false;
+            })
+            setData(prevState=>({
+                ...prevState,
+                jokes: allJokes,
+            }))
+        })
+````
 ### Sources: 
 API's used:<br>
  * [Jokes API](https://github.com/15Dkatz/official_joke_api)
