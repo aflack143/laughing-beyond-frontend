@@ -72,27 +72,29 @@ class Profile extends Component {
         const user = this.state.user
         return (
             <div className="user">
-                <div>
+                <div id='profilecontainer'>
                     <h3>Profile</h3>
-                    <div className='profile'>
-                        <img src={user.img}/>
-                        <div className='profileinfo'>
-                            <p>{user.name}</p>
-                            <p>{user.email}</p>
-                            <p>{user.username}</p>
-                        </div>
-                        <div className='profileedit'>
-                            {user.display &&
-                            <EditProfile 
-                                user={user} 
-                                handleChange={this.handleChange} 
-                                handleSubmit={this.handleSubmit} 
-                                handleDelete={this.handleDelete}
-                                />
-                            }
-                            {!user.display &&
-                            <EditProfileButton handleButtonView={this.handleButtonView}/>
-                            }
+                    <div id='profilebox'>
+                        <div className='profile'>
+                            <img src={user.img}/>
+                            <div className='profileinfo'>
+                                <p>{user.name}</p>
+                                <p>{user.email}</p>
+                                <p>{user.username}</p>
+                            </div>
+                            <div className='profileedit'>
+                                {user.display &&
+                                <EditProfile 
+                                    user={user} 
+                                    handleChange={this.handleChange} 
+                                    handleSubmit={this.handleSubmit} 
+                                    handleDelete={this.handleDelete}
+                                    />
+                                }
+                                {!user.display &&
+                                <EditProfileButton handleButtonView={this.handleButtonView}/>
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

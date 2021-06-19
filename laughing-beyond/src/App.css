@@ -77,24 +77,27 @@
   width: 300px;
   height: fit-content;
   margin: 0;
-  margin-top: 20px;
+  margin: 20px 5px 10px 5px;
   display: flex;
   flex-direction: column;
 }
 #searchform select{
-  width: 300px;
+  width: 250px;
+  margin: 0 auto;
   margin-bottom: 5px;
-  background-color:rgb(250, 178, 46);
-  color: slategrey;
+  background-color:rgb(70, 68, 66);
+  color: whitesmoke;
   border: slategrey solid 2px;
   font-size: 20px;
+  height: 50px;
 }
 
-#searchform input{
-  width: 300px;
+#searchform input {
+  width: 250px;
+  margin: 0 auto;
   margin-top: 5px;
-  background-color: rgb(250, 178, 46);
-  color: slategrey;
+  background-color: rgb(70, 68, 66);
+  color: whitesmoke;
   border: slategrey solid 2px;
 }
 
@@ -317,6 +320,10 @@ h3 {
   font-size: 40px;
 }
 
+#profilecontainer h3 {
+  padding-top: 40px;
+}
+
 .user {
   margin: 0;
   min-height: 81vh;
@@ -351,6 +358,7 @@ label {
   display: inline-block;
   text-align: right;
 }
+
 input[type=submit], #deletebtn, #editbtn {
   background-color: rgb(214, 155, 45);
   color: white;
@@ -384,39 +392,59 @@ button, input[type=submit]  {
   font-weight: bold;
 }
 
+#profilecontainer{
+  height: 81vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+#profilebox {
+  margin: 50px auto;
+}
+
 .profile {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  height: 500px;
+  height: fit-content;
 }
 
 img {
   width: 300px;
-  min-height: 300px;
-  max-height: 500px;
+  height: 400px;
   margin-left: 20px;
+  border: rgb(214, 155, 45) solid 5px;
 }
 
 .profileinfo {
-  width: 100px;
+  width: 50%;
+  min-width: 200px;
   font-size: 30px;
   text-overflow: wrap;
 }
 .profileedit {
-  max-width: 50%;
   width: 500px;
+  justify-content: flex-end;
 }
 
 .profilecontainer {
   padding: 0;
-  margin: 0 auto;
-  width: 100%;
+  margin: 0;
+  width: 90%;
 }
 
 .profilecontainer form {
-margin: 0 auto;
-max-width: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+#deletebtn, #editbtn{
+  width: 300px;
+}
+
+.profile label{
+  min-width: 100px;
 }
 
 .login {

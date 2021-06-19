@@ -19,7 +19,7 @@ const [display, setDisplay] = useState(props.display)
                     <button className='searchbtn' onClick={handleClick}>Hide Search</button>
                     <form id='searchform' onSubmit={props.handleSubmit}>
                         <select value={props.type} name="type" type="dropdown" onChange={props.handleChange} >
-                                <option  value="trivia">Trivia</option>
+                                <option value="trivia">Trivia</option>
                                 <option value="math">Math</option>
                                 <option value="date">Date</option>
                                 <option value="year">Year</option>
