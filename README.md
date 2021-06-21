@@ -10,7 +10,7 @@ Jointly created by Julia Christensen and Andrea Clark
 Screenshots from website: <br>
 <img src="https://user-images.githubusercontent.com/80013194/122523473-aa309f00-cfdc-11eb-9895-5f2a84683d43.png" width="100" height="100">
 <img src="https://user-images.githubusercontent.com/80013194/122622081-2e2a6b80-d05d-11eb-8d46-6ad0232fbe0d.png" width="100" height="100">
-<img src="https://user-images.githubusercontent.com/80013194/122523299-7a819700-cfdc-11eb-8e6b-544d38343e7c.png" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/80013194/122783732-702ef980-d277-11eb-8560-b96bcbdd5d29.png" width="100" height="100">
 
 Demo: http://laughing-beyond.surge.sh/
 
@@ -32,14 +32,16 @@ Demo: http://laughing-beyond.surge.sh/
 **_Silver_**:
 * Jokes Page
     * Search using radio buttons for 4 types of jokes (Random, General, Knock-Knock, Programming)
+    * Show/Hide all punchlines instead of individually
 * FunFacts Page
-    * User input number to display a random fact about that number
-    * User input month/day to display a random fact about that date in history
-
-**_Gold_**:
+    * User input number to display a random fact based on selected category
+    
+**_Gold / Future Enhancement_**:
 * Jokes Page
     * Search box allowing to search for specific words in "setup" content (ie: road, array, cow, etc..)
     * Add a joke
+* FunFacts Page
+    * User input to display a random fact based on number/date selected
 * Quotes Page
     * Display a random Quotes with name of Author
     * Search Author for all quotes said by them.
@@ -96,7 +98,6 @@ Other sources used:<br>
  * [Rerendering Child Component when props is updated on Parent](https://stackoverflow.com/questions/38892672/react-why-child-component-doesnt-update-when-prop-changes)<br>
  * [Hover Animation](https://www.joshwcomeau.com/react/boop/)
  * [Setting state within an array of children](https://medium.com/swlh/the-setstate-hook-for-setting-state-on-an-array-of-children-11e6437880da)
-* [Setting up drop down list](https://blog.logrocket.com/building-a-custom-dropdown-menu-component-for-react-e94f02ced4a1/)
-* [How to Fetch Data in React ](https://www.freecodecamp.org/news/fetch-data-react/)
-building-a-custom-dropdown-menu-component-for-react-e94f02ced4a1/)
-* [ES6 This.state to ovoid binding ](https://medium.com/@joespinelli_6190/using-arrow-functions-to-avoid-binding-this-in-react-5d7402eec64)
+ * [Setting up drop down list](https://blog.logrocket.com/building-a-custom-dropdown-menu-component-for-react-e94f02ced4a1/)
+ * [How to Fetch Data in React ](https://www.freecodecamp.org/news/fetch-data-react/building-a-custom-dropdown-menu-component-for-react-e94f02ced4a1/)
+ * [ES6 This.state to ovoid binding ](https://medium.com/@joespinelli_6190/using-arrow-functions-to-avoid-binding-this-in-react-5d7402eec64)
