@@ -96,3 +96,7 @@ Other sources used:<br>
  * [Rerendering Child Component when props is updated on Parent](https://stackoverflow.com/questions/38892672/react-why-child-component-doesnt-update-when-prop-changes)<br>
  * [Hover Animation](https://www.joshwcomeau.com/react/boop/)
  * [Setting state within an array of children](https://medium.com/swlh/the-setstate-hook-for-setting-state-on-an-array-of-children-11e6437880da)
+* [Setting up drop down list](https://blog.logrocket.com/building-a-custom-dropdown-menu-component-for-react-e94f02ced4a1/)
+* [How to Fetch Data in React ](https://www.freecodecamp.org/news/fetch-data-react/)
+building-a-custom-dropdown-menu-component-for-react-e94f02ced4a1/)
+* [ES6 This.state to ovoid binding ](https://medium.com/@joespinelli_6190/using-arrow-functions-to-avoid-binding-this-in-react-5d7402eec64)
