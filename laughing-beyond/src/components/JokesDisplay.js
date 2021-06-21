@@ -11,29 +11,17 @@ const JokesDisplay = () => {
     })
 
     const fetchData = (inputType) => {
-        inputType === 'random' ?
-        axios.get('https://official-joke-api.appspot.com/jokes/ten')
+      const url =
+        (inputType === 'random')
+          ? 'https://official-joke-api.appspot.com/jokes/ten'
+          : `https://official-joke-api.appspot.com/jokes/${inputType}/ten`
+      axios.get(url)
         .then(resp => {
-            const allJokes = resp.data
-            allJokes.forEach(joke => {
-            joke.display = false;
-            })
-            setData(prevState=>({
-                ...prevState,
-                jokes: allJokes,
-            }))
-        })
-        :
-        axios.get(`https://official-joke-api.appspot.com/jokes/${inputType}/ten`)
-        .then(resp => {
-            const allJokes = resp.data
-            allJokes.forEach(joke => {
-            joke.display = false;
-            })
-            setData(prevState=>({
-                ...prevState,
-                jokes: allJokes,
-            }))
+          const allJokes = resp.data;
+          const updatedJokes = allJokes.map(joke => {
+            return { display: false, ...joke }
+          })
+          setData({ jokes: updatedJokes, type: 'random', allDisplay: false })
         })
     }
 
@@ -48,65 +36,57 @@ const JokesDisplay = () => {
     }
 
     const handleRefresh = (event) => {
-        event.preventDefault()
-        setData(prevState=>({
-            ...prevState,
-            // display: false,
-            allDisplay: false
-        }))
-        fetchData(data.type)
-        console.log(jokes)
+      fetchData(data.type)
     }
 
     useEffect(() => {
         fetchData(data.type)
     }, [])
 
-    const handleHide = (event) => {
-        event.preventDefault()
-        const allJokes = jokes
-        allJokes.forEach(joke => {
-            joke.display = false;
-        })
-            setData(prevState=>({
-                ...prevState,
-                jokes: allJokes,
-                allDisplay: false
-            }))
+    const handleClick = (event, type) => {
+      event.preventDefault();
+
+      const updatedJokes = data.jokes.map(joke => {
+        joke.display = type;
+        return joke
+      })
+      console.log(updatedJokes)
+      setData({
+        jokes: updatedJokes,
+        allDisplay: type
+      })
     }
 
-    const handleShow = (event) => {
-        event.preventDefault()
-        const allJokes = jokes
-        allJokes.forEach(joke => {
-            joke.display = true;
-            })
-            setData(prevState=>({
-                ...prevState,
-                jokes: allJokes,
-                allDisplay: true
-            }))
+    const handleShowClick = (evt, id) => {
+      evt.preventDefault();
+
+      const updatedJokes = data.jokes.map(joke => {
+        joke.display = joke.id === id ? !joke.display : joke.display
+        return joke;
+      })
+
+      setData({
+        jokes: updatedJokes,
+        allDisplay: data.allDisplay,
+        type: data.type
+      })
     }
-    
-    const jokes = data.jokes
+
+    console.log(data.jokes)
 
     return (
         <div id='jokes'>
             <h3>Jokes</h3>
-            <JokesSearch 
-            type={data.type} 
-            allDisplay={data.allDisplay} 
-            handleChange={handleChange} 
-            handleRefresh={handleRefresh}
-            handleHide={handleHide}
-            handleShow={handleShow}
+            <JokesSearch
+              type={data.type}
+              allDisplay={data.allDisplay}
+              handleChange={handleChange}
+              handleRefresh={handleRefresh}
+              handleHide={handleClick}
+              handleShow={handleClick}
             />
             <div className='jokes'>
-                {jokes.map((joke) => {
-                    return(
-                        <Joke joke={joke}/>
-                    )
-                })}
+                { data.jokes.map((joke) => <Joke joke={joke} key={joke.id} handleClick={handleShowClick} /> ) }
             </div>
         </div>
     )

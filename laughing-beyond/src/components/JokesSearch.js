@@ -4,9 +4,9 @@ const JokesSearch = (props) => {
     return (
         <div id="jokesearch">
             {props.allDisplay ?
-            <button id='hide-btn' onClick={props.handleHide}>Hide All Answers</button>
+            <button id='hide-btn' onClick={(evt) => props.handleHide(evt, false)}>Hide All Answers</button>
             :
-            <button id='show-btn' onClick={props.handleShow}>Show All Answers</button>
+            <button id='show-btn' onClick={(evt) => props.handleShow(evt, true)}>Show All Answers</button>
             }
             <fieldset className="jokesearch" onChange={props.handleChange}>
                 <label className='radiobtn' for='general'><input className='radiobtn' type='radio' name='type' value='general' checked={props.type === 'general'}/>General</label>
