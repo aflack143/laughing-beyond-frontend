@@ -42,7 +42,7 @@ const JokesDisplay = () => {
         setData(prevState=>({
             ...prevState,
             type: event.target.value,
-            display: false
+            // display: false
         }))
         fetchData(event.target.value)
     }
@@ -51,7 +51,7 @@ const JokesDisplay = () => {
         event.preventDefault()
         setData(prevState=>({
             ...prevState,
-            display: false,
+            // display: false,
             allDisplay: false
         }))
         fetchData(data.type)
@@ -103,7 +103,6 @@ const JokesDisplay = () => {
             />
             <div className='jokes'>
                 {jokes.map((joke) => {
-                    console.log(joke)
                     return(
                         <Joke joke={joke}/>
                     )
