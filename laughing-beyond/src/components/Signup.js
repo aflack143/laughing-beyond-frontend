@@ -28,7 +28,6 @@ class Signup extends Component {
         event.preventDefault()
         axios.post("http://localhost:3001/auth/signup", this.state.data)
         .then(resp => {
-            // console.log(resp)
             this.props.history.push(`/profile/${resp.data.user.id}`)
         })
         .catch(err => {
@@ -37,7 +36,6 @@ class Signup extends Component {
     }
 
     render() {
-        // console.log(this.state.data)
         return (
             <div className="user signup">
                 <div className="container">
